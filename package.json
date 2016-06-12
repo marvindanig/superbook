@@ -1,6 +1,6 @@
 {
   "name": "superbook",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "Marvin Danig <marvin@bubbl.in> (https://bubbl.in/marvin)",
-  "license": "ISC",
+  "license": "TBD",
   "bugs": {
     "url": "https://github.com/bookiza/superbook/issues"
   },
