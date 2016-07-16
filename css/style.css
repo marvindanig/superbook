@@ -1,10 +1,22 @@
-html, body {
+* {
+    box-sizing: border-box;
+}
+
+*:after {
+    box-sizing: border-box;
+}
+
+*:before {
+    box-sizing: border-box;
+}
+
+html,
+body {
     margin: 0;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
-    background: red;
     cursor: none;
     display: flex;
     align-items: center;
@@ -12,7 +24,6 @@ html, body {
 }
 
 .viewer {
-    background: blue;
     pointer-events: auto;
     cursor: default;
 }
@@ -22,13 +33,21 @@ html, body {
     height: 100%;
     overflow: hidden;
     position: relative;
-    background-color: #da0;
+}
+
+.page {
+    height: 100%;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
 }
 
 @media (max-width: 870px) {
     body .viewer {
         width: calc(100vh * 1560/(1000 * 2));
         height: 100vh;
+    }
+    body .page {
+        width: 100%;
     }
 }
 
@@ -37,6 +56,9 @@ html, body {
         width: calc(100vh * 1560/1000);
         height: 100vh;
     }
+    body .page {
+        width: 50%;
+    }
 }
 
 .arrow-controls {
@@ -44,29 +66,28 @@ html, body {
     transition: none;
     opacity: 1;
     width: 30px;
-    height: 100%;    
+    height: 100%;
     opacity: 0.5;
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
     cursor: pointer;
     background: rgba(100, 100, 100, 0.4);
     color: white;
-    z-index: 10;    
+    z-index: 10;
 }
 
 .previous-page {
     float: left;
-    margin:0 0 0 -30px;
+    margin: 0 0 0 -30px;
     float: left;
     border-radius: 10px 0 0 10px;
 }
 
-.next-page{
+.next-page {
     float: right;
     margin: 0 -30px 0 0;
     border-radius: 0 10px 10px 0;
 }
-
 
 .flex {
     display: -webkit-box;
@@ -80,26 +101,6 @@ html, body {
     justify-content: center;
 }
 
-.page {
-    background: rgba(200, 25, 25, 0.1);
-    height: 100%;
-    width: 50%;
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
-
-}
-
-.page iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 0px none;
-    min-width: 100%;
-    min-height: 100%;
-    margin: 0;
-    background: white;
-}
-
 .no-selection {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -107,10 +108,6 @@ html, body {
     -ms-user-select: none;
     user-select: none;
 }
-
-
-
-
 
 .arrow-tap {
     opacity: 1;
@@ -179,4 +176,60 @@ html, body {
         -ms-transform: translateX(0px);
         transform: translateX(0px);
     }
+}
+
+.page iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0px none;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: lightblue;
+}
+
+.green {
+    background-color: lightgreen;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.white {
+    background-color: white;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.left {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0
 }
