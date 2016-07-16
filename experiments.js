@@ -1,32 +1,17 @@
--+!~(function(window, document, undefined){
++!~-(function(w, d, undefined) {
 
-	console.log('hello world');
-	
+    console.log('hello world');
+
 })(this, document);
 
 
--+!~(function(window, undefined){
-	console.log(this);
-})(this);
 
+// Asynchronous recursion
+// (function loopsie(w, d) {
+//     doStuff(d);
+//     setTimeout(loopsie, 100);
+// })(this, document);
 
-// setInterval(function(){ 
-// 	doStuff();
-// }, 100);
-
-// (function loopsie(){
-// 	// Asynchronous recursion
-
-// 	doStuff();
-	
-// 	$('#update').on('load', this.href, function(error, success){
-// 		loopsie();
-// 	});
-
-// })($);
-
-
-function doStuff(){
-	console.log('hello world');
-
-}
+// function doStuff(d) {    
+//     console.log('hello world');
+// }

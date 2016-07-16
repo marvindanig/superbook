@@ -10,14 +10,13 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     margin: 0;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
-    /* cursor: none; */
+    cursor: none; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,6 +188,11 @@ body {
     min-height: 100%;
     margin: 0;
 }
+
+
+
+
+
 
 .red {
     background-color: red;

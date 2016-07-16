@@ -1,11 +1,6 @@
-
-+(function(window, document, undefined){
-
-	console.log('hello world');
++!~-(function(window, document, undefined){
+	
+  console.log(this);
+  console.log('I am here');
 
 })(this, document);
-
-
-~+-!(function(window, undefined){
-	console.log(this);
-})(this);
