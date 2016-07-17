@@ -25,6 +25,8 @@ html, body {
 .viewer {
     pointer-events: auto;
     cursor: default;
+   -webkit-perspective: 2000px;
+    perspective: 2000px; 
 }
 
 .book {
@@ -36,8 +38,6 @@ html, body {
 
 .page {
     height: 100%;
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
 }
 
 @media (max-width: 870px) {
@@ -62,13 +62,15 @@ html, body {
     }
 }
 
+
+/* Arrow buttons for desktops */
+
 .arrow-controls {
     -webkit-transition: none;
     transition: none;
-    opacity: 1;
     width: 30px;
     height: 100%;
-    opacity: 0.5;
+    opacity: 1;
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
     cursor: pointer;
@@ -102,7 +104,7 @@ html, body {
     justify-content: center;
 }
 
-.no-selection {
+.noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -189,10 +191,27 @@ html, body {
     margin: 0;
 }
 
+.left {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.promoted {
+  will-change: transform;
+  transform: translateZ(0);
+}
 
 
-
-
+/* Deletable */
 
 .red {
     background-color: red;
@@ -226,16 +245,17 @@ html, body {
     background-color: gray;
 }
 
-.left {
-    float: left;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
 }
 
-.right {
-    float: right;
-    position: absolute;
-    top: 0;
-    right: 0
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active { 
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
 }

@@ -1,6 +1,17 @@
-+!~-(function(window, document, undefined){
-	
-  console.log(this);
-  console.log('I am here');
++!~-(function(w, d, undefined) {
+
+    console.log('hello world');
 
 })(this, document);
+
+
+
+// Asynchronous recursion
+// (function loopsie(w, d) {
+//     doStuff(d);
+//     setTimeout(loopsie, 100);
+// })(this, document);
+
+// function doStuff(d) {    
+//     console.log('hello world');
+// }

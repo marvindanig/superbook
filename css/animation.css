@@ -1,0 +1,29 @@
+.turn {
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.turner {
+  animation-name: turner;
+  animation-iteration-count: twice;
+  animation-timing-function: ease;
+  animation-delay: 0;
+  animation-duration: 30s;  
+}
+
+@keyframes turner { 
+    from {
+        transform: rotateY(0deg); 
+/*        transform: translateX(0);
+*/    }
+    to {
+        transform: rotateY(359deg); 
+/*        transform: translateX(-100px);
+*/    }
+}
+
