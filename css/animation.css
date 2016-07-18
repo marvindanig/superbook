@@ -8,22 +8,50 @@
   transition: all 1s;
 }
 
-.turner {
-  animation-name: turner;
-  animation-iteration-count: twice;
+.forward {
+  animation-name: forward;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-delay: 0;
+  animation-duration: 3s;  
+  transform-origin: 0 50% 0;
+}
+
+@keyframes forward { 
+    from {
+        transform: rotateY(0deg); 
+    }
+    to {
+        transform: rotateY(180deg); 
+    }
+}
+
+.backward {
+  animation-name: backward;
+  animation-iteration-count: infinite;
   animation-timing-function: ease;
   animation-delay: 0;
   animation-duration: 30s;  
+  transform-origin: 100% 50% 0;
 }
 
-@keyframes turner { 
+@keyframes backward { 
     from {
         transform: rotateY(0deg); 
-/*        transform: translateX(0);
-*/    }
+    }
     to {
-        transform: rotateY(359deg); 
-/*        transform: translateX(-100px);
-*/    }
+        transform: rotateY(-180deg); 
+    }
 }
 
+.flipped {
+  transform: rotateY( 180deg );
+}
+
+.front {
+  z-index: 1;
+}
+
+.back {
+  z-index: -1;
+}

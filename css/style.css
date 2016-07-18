@@ -25,19 +25,30 @@ html, body {
 .viewer {
     pointer-events: auto;
     cursor: default;
-   -webkit-perspective: 2000px; /* Applies uniformly to its children */
-    perspective: 2000px; 
+   -webkit-perspective: 200px; /* Applies uniformly to its children */
+    perspective: 200px; 
+    perspective-origin: 50% 50%;
 }
 
 .book {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    transform: translateZ(0px); /* Can effect pinch2zoom */
+    transform-style: preserve-3d;
+}
+
+.leaf {
+    height:100%;
     position: relative;
 }
 
 .page {
     height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
 }
 
 @media (max-width: 870px) {
@@ -47,8 +58,10 @@ html, body {
         max-height: calc(100vw * 1443/1114);
     }
     body .page {
+        backface-visibility: hidden;
+    }
+    body .leaf {
         width: 100%;
-        backface-visibility: none;
     }
 }
 
@@ -59,8 +72,10 @@ html, body {
         max-height: calc(50vw * 1443/1114);
     }
     body .page {
-        width: 50%;
         backface-visibility: hidden;
+    }
+    body .leaf {
+        width: 50%;
     }
 }
 
@@ -239,8 +254,8 @@ html, body {
     background-color: pink;
 }
 
-.white {
-    background-color: white;
+.wheat {
+    background-color: wheat;
 }
 
 .gray {
