@@ -25,7 +25,7 @@ html, body {
 .viewer {
     pointer-events: auto;
     cursor: default;
-   -webkit-perspective: 2000px;
+   -webkit-perspective: 2000px; /* Applies uniformly to its children */
     perspective: 2000px; 
 }
 
@@ -48,6 +48,7 @@ html, body {
     }
     body .page {
         width: 100%;
+        backface-visibility: none;
     }
 }
 
@@ -59,6 +60,7 @@ html, body {
     }
     body .page {
         width: 50%;
+        backface-visibility: hidden;
     }
 }
 
