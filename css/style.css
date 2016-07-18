@@ -43,6 +43,11 @@ html, body {
     position: relative;
 }
 
+.static {
+    position: absolute;
+    z-index: -1;
+}
+
 .page {
     height: 100%;
     width: 100%;
