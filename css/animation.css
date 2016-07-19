@@ -43,15 +43,3 @@
         transform: rotateY(-180deg); 
     }
 }
-
-.flipped {
-  transform: rotateY( 180deg );
-}
-
-.front {
-  z-index: 1;
-}
-
-.back {
-  z-index: -1;
-}

@@ -30,44 +30,70 @@ html, body {
     perspective-origin: 50% 50%;
 }
 
-.book {
+#book {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    transform: translateZ(0px); /* Can effect pinch2zoom */
+    transform: translateZ(-100px); /* Can effect pinch2zoom */
     transform-style: preserve-3d;
 }
 
-.leaf {
-    height:100%;
-    position: relative;
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
 }
 
-.static {
-    position: absolute;
-    z-index: -1;
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active { 
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
 }
 
 .page {
     height: 100%;
-    width: 100%;
-    position: absolute;
+/*    position: absolute;
     top:0;
     left:0;
+*/}
+
+
+.left {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
+.right {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.promoted {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
 
 @media (max-width: 870px) {
     body .viewer {
-        width: calc(100vh * 1560/(1000 * 2));
+        width: calc(100vh * 1500/(1000 * 2));
         height: 100vh;
         max-height: calc(100vw * 1443/1114);
     }
     body .page {
         backface-visibility: hidden;
-    }
-    body .leaf {
         width: 100%;
     }
+    body .flipped {
+        transform: rotateY( 0deg );
+    }
+
 }
 
 @media (min-width: 871px) {
@@ -77,12 +103,18 @@ html, body {
         max-height: calc(50vw * 1443/1114);
     }
     body .page {
-        backface-visibility: hidden;
-    }
-    body .leaf {
+        backface-visibility: visible;
         width: 50%;
     }
+    body .flipped {
+        transform: rotateY( 180deg );
+    }
 }
+
+
+
+
+
 
 
 /* Arrow buttons for desktops */
@@ -213,25 +245,6 @@ html, body {
     margin: 0;
 }
 
-.left {
-    float: left;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.right {
-    float: right;
-    position: absolute;
-    top: 0;
-    right: 0
-}
-
-.promoted {
-  will-change: transform;
-  transform: translateZ(0);
-}
-
 
 /* Deletable */
 
@@ -265,19 +278,4 @@ html, body {
 
 .gray {
     background-color: gray;
-}
-
-
-.grabbable {
-    cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
-}
-
- /* (Optional) Apply a "closed-hand" cursor during drag operation. */
-.grabbable:active { 
-    cursor: grabbing;
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
 }

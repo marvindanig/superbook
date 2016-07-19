@@ -1,6 +1,12 @@
 +!~-(function(w, d, undefined) {
 
-    console.log('hello world');
+  
+
+  let book = {};
+
+  book.bounds = document.getElementById("book").getBoundingClientRect();
+
+  console.log(book.bounds);
 
 })(this, document);
 
@@ -15,3 +21,4 @@
 // function doStuff(d) {    
 //     console.log('hello world');
 // }
+  
