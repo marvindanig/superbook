@@ -1,16 +1,20 @@
-+!~-(function(w, d, undefined) {
++!~-((w, d, undefined) => {
 
   
 
-  let book = {};
+  // let book = {};
 
-  book.bounds = document.getElementById("book").getBoundingClientRect();
+  // book.bounds = document.getElementById("book").getBoundingClientRect();
 
-  console.log(book.bounds);
+  // console.log(book.bounds);
 
 })(this, document);
 
 
+// !+-~((undefined, ...a) => { })(this, document);
+
+
++!-~((...args) => { console.table(args); })(this, document);
 
 // Asynchronous recursion
 // (function loopsie(w, d) {
