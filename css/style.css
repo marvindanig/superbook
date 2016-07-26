@@ -34,7 +34,7 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    transform: translateZ(-100px); /* Can effect pinch2zoom */
+    transform: translateZ(0px); /* Can effect pinch2zoom */
     transform-style: preserve-3d;
 }
 
