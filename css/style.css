@@ -82,7 +82,7 @@ html, body {
 
 @media (max-width: 870px) {
     body .viewer {
-        width: calc(100vh * 1500/(1000 * 2));
+        width: calc(100vh * 1540/(1000 * 2));
         height: 100vh;
         max-height: calc(100vw * 1443/1114);
     }
@@ -98,7 +98,7 @@ html, body {
 
 @media (min-width: 871px) {
     body .viewer {
-        width: calc(100vh * 1560/1000);
+        width: calc(100vh * 1540/1000);
         height: 100vh;
         max-height: calc(50vw * 1443/1114);
     }
@@ -278,4 +278,15 @@ html, body {
 
 .gray {
     background-color: gray;
+}
+
+.plotter {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    background-color: #4f4;
 }
