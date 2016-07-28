@@ -16,10 +16,11 @@ html, body {
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
-    cursor: none; 
+    /* cursor: none; */    
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-duration: 2s;
 }
 
 .viewer {
@@ -38,26 +39,9 @@ html, body {
     transform-style: preserve-3d;
 }
 
-.grabbable {
-    cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
-}
-
- /* (Optional) Apply a "closed-hand" cursor during drag operation. */
-.grabbable:active { 
-    cursor: grabbing;
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
-}
-
 .page {
     height: 100%;
-/*    position: absolute;
-    top:0;
-    left:0;
-*/}
+}
 
 
 .left {
@@ -110,9 +94,6 @@ html, body {
         transform: rotateY( 180deg );
     }
 }
-
-
-
 
 
 
@@ -246,6 +227,21 @@ html, body {
 }
 
 
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+.grabbable:active { 
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+
 /* Deletable */
 
 .red {
@@ -278,15 +274,4 @@ html, body {
 
 .gray {
     background-color: gray;
-}
-
-.plotter {
-    width: 100vw;
-    height: 100vh;
-    z-index: 1000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.2;
-    background-color: #4f4;
 }

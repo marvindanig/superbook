@@ -29,7 +29,8 @@ html, body {
    -webkit-perspective: 200px; /* Applies uniformly to its children */
     perspective: 200px; 
     perspective-origin: 50% 50%;
-    background-color: red;
+    background-image: url(../plotter/graph.svg);
+    background-position: 0 0;
 }
 
 #origin {
