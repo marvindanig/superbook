@@ -14,7 +14,8 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, exclude: ['/node_modules/', '/js/'], loader: 'style-loader!css-loader!postcss-loader!' },
+            { test: /\.css$/, exclude: ['/node_modules/', '/js/', '/svg/'], loader: 'style-loader!css-loader!postcss-loader!' },
+            { test: /\.(png|jpg|svg)$/, loader: 'url-loader?limit=8192' },
             { test: /\.js$/, exclude: ['/node_modules/', '/css/'], loader: 'babel-loader' }
         ]
     },
