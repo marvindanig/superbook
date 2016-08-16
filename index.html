@@ -2,16 +2,13 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/animation.css" />
-    
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.4/js.cookie.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Superbook JS</title>
 
-<!--     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
- --></head>
+</head>
 
 <body class="noselect">
-    <div class="viewer noselect">
+    <div class="viewer noselect" id="plotter">
         <a class="arrow-controls next-page flex">
             <?xml version="1.0" encoding="utf-8"?>
             <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -35,7 +32,6 @@
             <div class="page gray right flipped"> 666666 </div>
             <div class="page pink left "> 777777 </div>
             <div class="page yellow right flipped"> 88888 </div>
-            
             <div class="page green left"> 999 </div>
             <div class="page blue right flipped"> AAA </div>
             <div class="page red left "> BBBB </div>
@@ -44,7 +40,6 @@
             <div class="page gray right flipped"> EEEE </div>
             <div class="page pink left "> FFFFF </div>
             <div class="page yellow right flipped"> GGGG </div>
-            
             <div class="page green left"> HHHH </div>
             <div class="page blue right flipped"> III </div>
             <div class="page red left "> JJJJ </div>
@@ -55,7 +50,48 @@
             <div class="page yellow right flipped"> OOO </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <table id="coordinates">
+        <tr>
+            <td> X-Pos</td>
+            <td id="xaxis"> </td>
+        </tr>
+        <tr>
+            <td> Y-Pos </td>
+            <td id="yaxis"> </td>
+        </tr>
+        <tr>
+            <td> Top </td>
+            <td id="ptop"> </td>
+        </tr>
+        <tr>
+            <td> Left </td>
+            <td id="pleft"> </td>
+        </tr>
+        <tr>
+            <td> Right </td>
+            <td id="pright"> </td>
+        </tr>
+        <tr>
+            <td> Bottom </td>
+            <td id="pbottom"> </td>
+        </tr>
+        <tr>
+            <td> Width </td>
+            <td id="pwidth"> </td>
+        </tr>
+        <tr>
+            <td> Height </td>
+            <td id="pheight"> </td>
+        </tr>
+        <tr>
+            <td> Origin </td>
+            <td>
+                <div> X: <span id="originX"></span> </div>
+                <div> Y: <span id="originY"></span> </div>
+            </td>
+        </tr>
+    </table>
+    <script src="./dist/bundle.js"></script>
 </body>
 
 </html>

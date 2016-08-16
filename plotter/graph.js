@@ -29,7 +29,6 @@
 
         origin.bounds = d.getElementsByTagName('body')[0].getBoundingClientRect();
 
-
         d.getElementById("originX").textContent = parseInt(origin.bounds.width) / 2;
         d.getElementById("originY").textContent = parseInt(origin.bounds.height) / 2;
 
