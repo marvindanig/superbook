@@ -14,8 +14,8 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style-loader!css-loader!postcss-loader" },
-            { exclude: ['/node_modules/', '/css/'], loader: 'babel-loader' }
+            { test: /\.css$/, exclude: ['/node_modules/', '/js/'], loader: 'style-loader!css-loader!postcss-loader!' },
+            { test: /\.js$/, exclude: ['/node_modules/', '/css/'], loader: 'babel-loader' }
         ]
     },
     postcss: function () {

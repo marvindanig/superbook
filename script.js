@@ -1,12 +1,13 @@
+import './css/style.css';
+
 import 'babel-polyfill';
 
 import $ from 'jquery';
 
-import people from './plotter/module.js';
+import people from './js/module.js';
 
-import graph from './plotter/graph.js';
+import graph from './js/graph.js';
 
-require("./css/style.css");
 
 
 !+-~(($, w, d, undefined) => {

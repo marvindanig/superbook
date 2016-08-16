@@ -274,3 +274,5 @@ html, body {
 .gray {
     background-color: gray;
 }
+
+@import './plotter.css'
