@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server ./script.js"
+    "start": "webpack-dev-server ./script.js --content-base dist/"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@ import 'babel-polyfill';
 
 import $ from 'jquery';
 
-import people from './js/module.js';
+import pages from './js/pages.js';
 
 import graph from './js/graph.js';
 
@@ -12,8 +12,7 @@ import graph from './js/graph.js';
 
 !+-~(($, w, d, undefined) => {
 
-
-  console.log('growl');
+  console.log(pages);
 
 
 
