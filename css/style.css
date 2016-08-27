@@ -16,14 +16,14 @@ html, body {
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
-    /* cursor: none; */    
+    cursor: none;     
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .viewer {
-    pointer-events: auto;
+    /*pointer-events: auto;*/
     cursor: default;
    -webkit-perspective: 200px; /* Applies uniformly to its children */
     perspective: 200px; 
@@ -35,7 +35,7 @@ html, body {
     height: 100%;
     overflow: hidden;
     transform: translateZ(0px); /* Can effect pinch2zoom */
-    transform-style: preserve-3d;
+    transform-style: preserve-3d; /* Gets faus 3D space for pages */
 }
 
 .page {
@@ -93,6 +93,10 @@ html, body {
         transform: rotateY( 180deg );
     }
 }
+
+
+
+
 
 
 
@@ -261,6 +265,7 @@ html, body {
 
 .orange {
     background-color: orange;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 200, 1);
 }
 
 .pink {
@@ -275,4 +280,5 @@ html, body {
     background-color: gray;
 }
 
-@import './plotter.css' 
+@import './plotter.css';
+
