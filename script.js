@@ -24,8 +24,6 @@ import viewer from './lib/mode.js';
     }) ;
 
 
-
-
     // We sweep pages here.
     book.pages = [...node.children].map(function(obj) {
         return wrapPage(obj);
