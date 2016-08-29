@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server ./script.js --content-base dist/",
     "test": " mocha ./tests/start.tests.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "commit": "git cz"
   },
   "repository": {
     "type": "git",
