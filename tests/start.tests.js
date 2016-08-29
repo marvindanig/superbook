@@ -13,10 +13,4 @@ describe('superbook', () => {
     });
   });
 
-  describe('book', () => {
-    it('Must be an Object', function() {
-      
-    });
-  });
-
 });

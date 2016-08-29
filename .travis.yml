@@ -6,10 +6,10 @@ cache:
 notifications:
   email: false
 node_js:
-  - '6.2.0'
-before_install:
-  - npm i -g 
+  - '6'
+before_script:
+  - npm prune 
 script:
-  - npm run test
+  - npm run test:single
 after_success:
   - npm run semantic-release

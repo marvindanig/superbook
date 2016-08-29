@@ -57,7 +57,7 @@ import viewer from './lib/mode.js';
     }
 
     printRange(book.range);
-
+    
     d.getElementById('next').addEventListener('click', () => {
         turnPage('next');
     });
