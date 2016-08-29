@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server ./script.js --content-base dist/",
-    "test": " mocha ./tests/start.tests.js -w"
+    "test": " mocha ./tests/start.tests.js"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,6 @@
     "webpack-dev-server": "1.15.0"
   },
   "dependencies": {
-    "babel-polyfill": "6.13.0",
-    "jquery": "3.1.0",
-    "match-media": "0.2.0"
+    "babel-polyfill": "6.13.0"
   }
 }
