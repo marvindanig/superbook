@@ -11,17 +11,17 @@ import graph from './lib/graph.js';
 import viewer from './lib/mode.js';
 
 
-!+-~((w, d, undefined) => {
+!+ -~((w, d, undefined) => {
 
     let node = d.getElementById('book');
 
     let book = {};
 
-    book.mode = viewer.getMatch('all and (min-width: 870px)') ? 'double' : 'single';  
+    book.mode = viewer.getMatch('all and (min-width: 870px)') ? 'double' : 'single';
 
-    viewer.onChange('all and (min-width: 870px)', function(match) { 
-      book.mode = match ? 'double' : 'single'; 
-    }) ;
+    viewer.onChange('all and (min-width: 870px)', function(match) {
+        book.mode = match ? 'double' : 'single';
+    });
 
 
     // We sweep pages here.
@@ -57,15 +57,20 @@ import viewer from './lib/mode.js';
     }
 
     printRange(book.range);
-    
-    d.getElementById('next').addEventListener('click', () => {
-        turnPage('next');
-    });
 
-    d.getElementById('previous').addEventListener('click', () => {
-        turnPage('previous');
-    });
+    d.getElementById('plotter').addEventListener('mouseenter', (event) => {
 
+
+        d.getElementById('next').addEventListener('click', () => {
+            turnPage('next');
+        });
+
+        d.getElementById('previous').addEventListener('click', () => {
+            turnPage('previous');
+        });
+
+
+    });
 
     function turnPage(direction) {
 
@@ -105,6 +110,14 @@ import viewer from './lib/mode.js';
         node.appendChild(elem);
     }
 
-    console.table(book);
+    // console.table(book);
+
+
+
+
+
+
+
+
 
 })(window, document);
