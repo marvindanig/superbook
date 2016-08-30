@@ -1,7 +1,7 @@
 {
   "name": "superbook",
   "version": "0.0.0-semantic-release",
-  "description": "",
+  "description": "A leafy alternative to Turnjs",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server ./script.js --content-base dist/",
