@@ -7,8 +7,10 @@ notifications:
   email: false
 node_js:
   - '6'
+  - '5'
+  - '4'    
 before_install:
-  - "npm install -g npm@latest"  
+  - "npm i -g npm@^2.0.0"  
 before_script:
   - npm prune
 script:
