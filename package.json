@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bookiza/superbook.git"
+    "url": "git+https://github.com/marvindanig/superbook.git"
   },
   "keywords": [],
   "author": "Marvin Danig <marvin@bubbl.in> (https://bubbl.in/marvin)",
   "license": "TBD",
   "bugs": {
-    "url": "https://github.com/bookiza/superbook/issues"
+    "url": "https://github.com/marvindanig/superbook/issues"
   },
-  "homepage": "https://github.com/bookiza/superbook#readme",
+  "homepage": "https://github.com/marvindanig/superbook/blob/master/README.markdown",
   "devDependencies": {
     "autoprefixer": "6.4.0",
     "babel-core": "6.14.0",
