@@ -47,7 +47,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     },
-    "ghooks": "npm run test:single"
+    "ghooks": { 
+      "pre-commit": "npm run test:single"
+    }
   },
   "release": {
     "verifyRelease": {
