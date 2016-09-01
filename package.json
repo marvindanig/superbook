@@ -2,7 +2,9 @@
   "name": "superbook",
   "description": "A leafy alternative to Turnjs",
   "main": "index.js",
+  "version": "0.0.0-semantically-released",
   "scripts": {
+    "build": "webpack",
     "start": "webpack-dev-server ./script.js --content-base dist/",
     "test": " mocha ./tests/start.tests.js -w",
     "test:single": " mocha ./tests/start.tests.js",
@@ -49,16 +51,6 @@
     },
     "ghooks": {
       "pre-commit": "npm run test:single"
-    }
-  },
-  "release": {
-    "verifyRelease": {
-      "path": "cracks",
-      "paths": [
-        "tests",
-        "package.json"
-      ],
-      "silent": true
     }
   }
 }
