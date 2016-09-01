@@ -110,14 +110,7 @@ import viewer from './lib/mode.js';
         node.appendChild(elem);
     }
 
-    // console.table(book);
-
-
-
-
-
-
-
+    console.table(book);
 
 
 })(window, document);
