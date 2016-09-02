@@ -2,16 +2,16 @@ import './css/style.css';
 
 import 'babel-polyfill';
 
-import isTouch from './lib/isTouch.js';
+import isTouch from './modules/isTouch.js';
 
-import whatever from './lib/pages.js';
+import whatever from './modules/pages.js';
 
-import graph from './lib/graph.js';
+import graph from './modules/graph.js';
 
-import viewer from './lib/mode.js';
+import viewer from './modules/mode.js';
 
 
-!+ -~((w, d, undefined) => {
+!+-~((w, d, undefined) => {
 
     let node = d.getElementById('book');
 
@@ -23,8 +23,11 @@ import viewer from './lib/mode.js';
         book.mode = match ? 'double' : 'single';
     });
 
+    book.length = node.children.length;
 
-    // We sweep pages here.
+    console.log('book.length =' + book.length);
+
+    // Scoop up pages here.
     book.pages = [...node.children].map(function(obj) {
         return wrapPage(obj);
     });
@@ -32,6 +35,8 @@ import viewer from './lib/mode.js';
 
     function wrapPage(pageObj) {
         // Wrap appropriately
+
+
         return pageObj;
     }
 
@@ -68,7 +73,6 @@ import viewer from './lib/mode.js';
         d.getElementById('previous').addEventListener('click', () => {
             turnPage('previous');
         });
-
 
     });
 
@@ -110,7 +114,7 @@ import viewer from './lib/mode.js';
         node.appendChild(elem);
     }
 
-    console.table(book);
+    // console.table(book);
 
 
 })(window, document);

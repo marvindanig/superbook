@@ -16,30 +16,31 @@ html, body {
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
-/*    cursor: none; */  
+    cursor: none;   
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .viewer {
-    /*pointer-events: auto;*/
+    pointer-events: auto;
     cursor: default;
    -webkit-perspective: 200px; /* Applies uniformly to its children */
     perspective: 200px; 
     perspective-origin: 50% 50%;
-}
+/*    transition: 3ms;
+*/}
 
 #book {
     width: 100%;
     height: 100%;
     overflow: hidden;
     transform: translateZ(0px); /* Can effect pinch2zoom */
-    transform-style: preserve-3d; /* Gets faus 3D space for pages */
+    transform-style: preserve-3d; /* Get faux 3D space for pages */
 }
 
 .page {
-    height: 100%;
+    height: 100%; /* Width determined with media query */
 }
 
 
@@ -93,11 +94,6 @@ html, body {
         transform: rotateY( 180deg );
     }
 }
-
-
-
-
-
 
 
 

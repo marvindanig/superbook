@@ -3,6 +3,6 @@
 [![npm](https://img.shields.io/npm/dt/superbook.svg?maxAge=2592000)](https://www.npmjs.com/package/superbook)
 
 
-# superbook.JS
+# Superbook.JS
 
-A leafy responsive alternative to Turnjs.
+A leafy responsive alternative to Turnjs. No jQuery dependency. No javascript fallback.
