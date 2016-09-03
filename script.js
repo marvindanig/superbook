@@ -2,10 +2,6 @@ import './css/style.css';
 
 import 'babel-polyfill';
 
-import isTouch from './modules/isTouch.js';
-
-import whatever from './modules/pages.js';
-
 import graph from './modules/graph.js';
 
 import viewer from './modules/mode.js';
@@ -49,7 +45,7 @@ import viewer from './modules/mode.js';
     }
 
 
-    // Print pages, add, remove into the DOM etc.
+    // Print to dom.
     book.range = [1, 6];
 
 

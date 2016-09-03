@@ -1,5 +1,5 @@
-+!~-((w, d, undefined) => {
+// +!~-((w, d, undefined) => {
 
-    module.exports.pages = book.pages;
+//     module.exports.pages = book.pages;
 
-})(window, document);
+// })(window, document);
