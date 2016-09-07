@@ -1,11 +1,10 @@
 {
   "name": "superbook",
   "description": "A leafy alternative to Turnjs",
-  "main": "index.js",
   "version": "0.0.0-semantically-released",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server ./script.js --content-base dist/",
+    "start": "webpack-dev-server ./lib/script.js --content-base html/",
     "test": " mocha ./tests/start.tests.js -w",
     "test:single": " mocha ./tests/start.tests.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",

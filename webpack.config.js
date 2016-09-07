@@ -7,7 +7,7 @@ const autoprefixer  = require('autoprefixer');
 module.exports = {
     context: __dirname,
     devtool: debug ? 'inline-sourcemap' : null,
-    entry: ['./script.js'],
+    entry: [`${__dirname}/lib/script.js`],
     output: {
         path: `${__dirname}/dist`,
         filename: 'bundle.js'

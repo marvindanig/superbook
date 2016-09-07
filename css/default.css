@@ -36,6 +36,7 @@ html, body {
     height: 100%;
     transform: translateZ(0px); /* Implement pinch2zoom? */
     transform-style: preserve-3d; /* Gets faux 3D space for pages */
+    background-color: red;
 }
 
 .page {
